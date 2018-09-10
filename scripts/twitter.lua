@@ -1,8 +1,12 @@
+-- twitter By NEP 
+--Based off of fuzzymannerz ooc mod (https://github.com/fuzzymannerz/ooc)
+
+
 AddEventHandler('chatMessage', function(source, name, msg)
 	sm = stringsplit(msg, " ");
-	if sm[1] == "/tweet" then
+	if sm[1] == "/twt" then
 		CancelEvent()
-		TriggerClientEvent('chatMessage', -1, "Twitter ", { 29, 161, 242 }, "|", { 128, 128, 128 }, "@ " .. name, string.sub(msg,5))
+		TriggerClientEvent('chatMessage', -1, "^5TWITTER^7 | @^2".. name, {214, 214, 214}, string.sub(msg,5))
 	end
 end)
 
@@ -17,4 +21,3 @@ function stringsplit(inputstr, sep)
     end
     return t
 end
-
