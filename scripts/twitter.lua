@@ -2,7 +2,7 @@ AddEventHandler('chatMessage', function(source, name, msg)
 	sm = stringsplit(msg, " ");
 	if sm[1] == "/tweet" then
 		CancelEvent()
-		TriggerClientEvent('chatMessage', -1, "Twitter ", { 29, 161, 242 }, "| ", { 128, 128, 128 }, .. name, { 255, 255, 255 }, string.sub(msg,5))
+		TriggerClientEvent('chatMessage', -1, "Twitter ", { 29, 161, 242 }, "|", { 128, 128, 128 }, "@ " .. name, string.sub(msg,5))
 	end
 end)
 
