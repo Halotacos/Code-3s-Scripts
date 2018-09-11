@@ -14,3 +14,8 @@ print("=======================")
 TriggerClientEvent("Showtwt", source)
 	end, false)
 TriggerEvent('chat:addSuggestion', '/' ..twtChat , 'Sends a Twitter message in chat.')
+
+RegisterServerEvent("SyncAd")
+AddEventHandler('SyncAd', function(adtype, inputText)
+	TriggerClientEvent('DisplayAd', -1, adtype, inputText)
+end)
