@@ -1,3 +1,9 @@
+print("")
+print("=======================")
+print("Twitter Script")
+print("By Code3Rp Dev Team")
+print("=======================")
+
 --Code3RP Twitter script Rewritten with RegisterCommand
 --Version 1.4
 
