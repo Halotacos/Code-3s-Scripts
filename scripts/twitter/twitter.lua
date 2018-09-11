@@ -11,6 +11,6 @@ print("=======================")
   --Twitter Command 
   RegisterCommand('twt', function(source, args, user)
 	--TriggerClientEvent('chatMessage', -1, "^0^5Twitter^0 | ^7@^2" .. GetPlayerName(source) .. "^0", {214, 214, 214}, table.concat(args, " "))
-TriggerClientEvent("ShowAds", source)
+TriggerClientEvent("Showtwt", source)
 	end, false)
 TriggerEvent('chat:addSuggestion', '/' ..twtChat , 'Sends a Twitter message in chat.')
