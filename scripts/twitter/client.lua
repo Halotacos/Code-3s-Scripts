@@ -9,23 +9,14 @@ local ads = {
 	ad('uber', 'CHAR_FLOYD', 'UBER', 'Uber', 'Phone Notification'),
 	ad('chp', 'CHAR_FLOYD', 'CHP', 'CHP Advisory', 'Phone Alert'),
 	ad('store', 'CHAR_FLOYD', '247', '24/7 Shop'),
-  ad('twt', 'CHAR_FLOYD', 'ADMIN', 'Twitter', 'Update'),
+  	ad('twt', 'CHAR_FLOYD', 'ADMIN', 'Twitter', 'Update'),
 	ad('onlyadmin', 'CHAR_FLOYD', 'ADMIN', 'Administration', nil, true)
 }
+local pic1 = 'CHAR_FLOYD'
+local pic2 = 'ADMIN'
+local 
 
-function ad(_id, _pic1, _pic2, _sender, _subject, _hidden)
-	if _hidden == nil then _hidden = false end
-	if _subject == nil then _subject = 'Advertisement' end
 
-	return {
-		id = _id,
-		pic1 = _pic1,
-		pic2 = _pic2,
-		sender = _sender,
-		subject = _subject,
-		hidden = _hidden
-	}
-end
 
 local function findAdById(id)
 	local output 
@@ -51,17 +42,9 @@ end)
 
 --[[EVENT TO DISPLAY AN AD TO THE PLAYER]]
 RegisterNetEvent('DisplayAd')
-AddEventHandler('DisplayAd',function(adtype, inputText)
-	local ad = findAdById(adtype)
-
-	if ad == nil then
-		TriggerEvent('chatMessage', 'SYSTEM', {0,0,0}, 'Invalid type of ad')
-		TriggerEvent('Showtwt')
-		return
-	end
-
+AddEventHandler('DisplayAd',function(inputText)
 	SetNotificationTextEntry('STRING');
 	AddTextComponentString(inputText);
-	SetNotificationMessage(ad.pic1, ad.pic2, true, 4, ad.sender, ad.subject);
+	SetNotificationMessage(pic1, pic2, true, 4, sender, subject);
 	DrawNotification(false, true);
 end)
