@@ -1,6 +1,7 @@
 print("")
 print("=======================")
 print("OnDuty Script")
+print("Version 1.0")
 print("By Code3Rp Dev Team")
 print("Rewritten and updated from Kvetz OnDuty Script")
 print("=======================")
